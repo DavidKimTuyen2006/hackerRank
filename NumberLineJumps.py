@@ -1,7 +1,12 @@
 def kangaroo(x1, v1, x2, v2):
-    result = "NO"
-    for i in range (10000):
-        if ((x1 + v1*i) == (x2 + v2*i)):
-            result = "YES"
-            return result
-    return result
+    num = x2 - x1
+    num2 = v1 - v2
+    
+    if (v1 - v2 == 0 and x2 != x1) or num * num2 < 0:
+        return "NO"
+        
+    if num % num2 == 0:
+        return "YES"
+    else:
+        return "NO"
+    
